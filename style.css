@@ -106,7 +106,7 @@ span.space {
   border-right: 0.15em solid white;
   white-space: nowrap;
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.2em solid white; /* The typwriter cursor */
@@ -286,39 +286,40 @@ img {
   padding-top: 4rem;
 }
 
-.img-container {
+/*.img-container {
   width: 80%;
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 40%));
-  grid-template-rows: auto auto;
   gap: 60px;
   justify-content: space-evenly;
-}
+}*/
 
 .description-box {
   color: white;
-  margin-bottom: 5rem;
 }
 
-.description-box p {
+.description {
   margin-bottom: 1rem;
+  font-size: 1.6rem;
+  max-width: 500px;
 }
 
-/*.img-container {
+.img-container {
   width: 80%;
   margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 60px;
   align-items: flex-end;
+  margin-bottom: 8rem;
 }
 
-.section-2 img {
-  width: 500px;
+.description-image {
+  max-width: 500px;
   height: 350px;
   object-fit: fill;
-}*/
+}
 
 /*/////SECTION 3//////////////////////////////////*/
 .wrap-text {
@@ -386,18 +387,14 @@ img {
     margin-left: 0;
   }
 
-  .img-container {
-    grid-template-columns: minmax(80%, 1fr);
-    grid-row: autofit;
-  }
-
   .description-box {
     width: 80%;
     margin-bottom: 4rem;
   }
 
-  .description-box-img {
-    max-width: 100%;
+  .img-container {
+    grid-template-columns: minmax(100%, 1fr);
+    grid-row: autofit;
   }
 }
 
@@ -409,7 +406,7 @@ img {
     margin-inline: auto;
   }
 
-  .description-box p {
+  .description {
     font-size: 1rem;
     height: auto;
   }
@@ -435,5 +432,10 @@ img {
 @media screen and (max-width: 600px) {
   .wrap-text {
     font-size: 1rem;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr;
+    height: 100%;
   }
 }
